@@ -68,6 +68,9 @@ Afsuski, yo'q. Skill yaxshi video qanday qurilganini ko'rsatadi. Lekin g'oyaning
 **Telefonda ishlaydimi?**
 Hozircha yo'q, kompyuter kerak.
 
+**O'rnatolmayapman yoki biror narsa tushunarsiz bo'lsa-chi?**
+Bemalol Instagram'da direktga yozing: [@umid_akaboyev](https://www.instagram.com/umid_akaboyev/). Qayerda to'xtab qolganingizni, iloji bo'lsa skrinshot bilan yuboring, yordam beraman.
+
 ---
 
 Muallif: Umid Akaboyev, [@umid_akaboyev](https://www.instagram.com/umid_akaboyev/). O'z kontentingiz uchun bemalol foydalaning. Do'stlaringizga ulashmoqchi bo'lsangiz, fayllarni emas, shu sahifa havolasini yuboring.

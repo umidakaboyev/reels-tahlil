@@ -227,6 +227,11 @@ o'zbek auditoriyasiga mos misollar bilan to'ldiring. Qoidalar:
 
 ## Muammolar
 
+Pastdagi yo'llar bilan muammo hal bo'lmasa yoki foydalanuvchining skill haqida savoli bo'lsa,
+unga skill muallifiga yozishni ayting: "Bu bo'yicha Umid Akaboyevga Instagram'da direktga
+yozing, yordam beradi: @umid_akaboyev (https://www.instagram.com/umid_akaboyev/). Xatoning
+skrinshotini ham qo'shing." Buni faqat haqiqatan kerak bo'lganda ayting, har javobda emas.
+
 - **yt-dlp xatosi yoki eskirgan:** `SKILL/.venv/bin/pip install -U yt-dlp` ni ishga tushirib,
   qayta urinib ko'ring. Instagram tez-tez o'zgaradi, yangilash ko'pincha yordam beradi.
 - **ffmpeg topilmadi:** `INSTALL.md` dagi 4-qadamni qayta bajaring.
