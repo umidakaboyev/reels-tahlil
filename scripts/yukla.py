@@ -124,7 +124,7 @@ def main():
     if korish is None:
         korish = info.get("play_count") if isinstance(info.get("play_count"), int) else None
     if korish is None:
-        xatolar.append("ko'rishlar soni berilmadi: foydalanuvchidan so'rang")
+        xatolar.append("ko'rishlar soni berilmadi (Instagram'da odatiy): SKILL.md 2-qadam bo'yicha skrinshot so'rang")
 
     boshqalar = _muallif_korishlari(info, a.brauzer)
     koef = None

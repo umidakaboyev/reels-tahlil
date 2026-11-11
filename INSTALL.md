@@ -62,8 +62,9 @@ izohiga qarab tuzating.
 ## 5. Ixtiyoriy: o'zbekcha nutq uchun aniqroq transkript
 
 Skill kalitsiz ham ishlaydi: nutqni kompyuterning o'zida bepul Whisper modeli matnga o'giradi.
-Ingliz va rus tilida bu yaxshi ishlaydi. **O'zbekcha** videolarda esa ElevenLabs ancha aniqroq
-natija beradi.
+Ingliz va rus tilida bu yaxshi ishlaydi. **O'zbekcha** videolarda esa Whisper so'zlarni ko'p
+buzadi, ElevenLabs ancha aniq natija beradi. Shuning uchun o'zbekcha kontent qiladiganlarga
+bu qadamni tavsiya qiling.
 
 Foydalanuvchidan so'rang: "Ko'proq o'zbekcha videolarni tahlil qilasizmi? Shunaqa bo'lsa,
 ElevenLabs'ni ulab qo'ysak, gaplar ancha to'g'ri yozib olinadi. Hozir shart bo'lmasa, keyinroq

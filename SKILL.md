@@ -63,12 +63,27 @@ ga nusxalang va keyingi qadamga o'ting.
 Video odatdagidan qanchalik yaxshi ishlaganini bilish tahlilning yarmi. `info.json` dan
 `korishlar`, `layklar`, `kommentlar`, `muallif` va `sana` ni oling.
 
-"Odatdagidan necha barobar" (koeffitsient) uchun shu muallifning boshqa videolari kerak:
+**Instagram ko'rishlar sonini login qilmagan odamga bermaydi.** Shuning uchun Instagram
+reels'da `korishlar` deyarli har doim `null` chiqadi. Bu xato emas, oldindan kutilgan holat.
+Layk va komment soni odatda keladi.
 
-- Agar `info.json` da `muallif_videolari` bo'lsa, `yukla.py` koeffitsientni o'zi hisoblagan
-  (`koeffitsient` maydoni). Shuni ishlating.
-- Bo'lmasa, foydalanuvchidan so'rang: "Bu blogerning oxirgi 6–10 ta videosi taxminan necha
-  ming ko'rish oladi? Profilga kirib ko'rishlar sonini yozib bering." Javobni olib:
+"Odatdagidan necha barobar" (koeffitsient) uchun shu muallifning boshqa videolari ham kerak:
+
+- Agar `info.json` da `muallif_videolari` bo'lsa (odatda TikTok'da), `yukla.py` koeffitsientni
+  o'zi hisoblagan (`koeffitsient` maydoni). Shuni ishlating.
+- Bo'lmasa (Instagram'da deyarli har doim), **ko'rishlar sonini skrinshot orqali so'rang.**
+  Bu foydalanuvchi uchun eng oson yo'l. Taxminan shunday deng:
+
+  > Instagram ko'rishlar sonini tashqariga bermaydi, shuning uchun bir kichik yordam kerak.
+  > Telefonda shu blogerning profiliga kiring va **Reels** bo'limini oching. U yerda har bir
+  > video ustida ko'rishlar soni turadi. Shu ekranni skrinshot qilib tashlang. Bizning video
+  > ham shu skrinshotda ko'rinsa yaxshi, ko'rinmasa uning ko'rishlarini alohida yozing.
+
+  Skrinshot kelgach, har bir videodagi sonni o'qing (`1.2M`, `85.4K`, `12,3 тыс.` kabi
+  yozuvlarni ham). Tahlil qilinayotgan videoni va qolgan 6–12 tasini ajrating. O'qiganingizni
+  bir qatorda foydalanuvchiga ko'rsating, masalan: "Skrinshotdan shularni o'qidim: 1.2M
+  (bizning video), 95K, 120K, 80K…". Rozilik bo'lsa, yoki xato bo'lsa tuzatib, hisoblang.
+  Foydalanuvchi sonlarni matn qilib yozsa ham bo'ladi. Keyin:
 
 ```bash
 SKILL/.venv/bin/python SKILL/scripts/koeffitsient.py --video <shu-video-korishlari> --boshqalar 12000 8500 15000 ...
@@ -102,8 +117,25 @@ SKILL/.venv/bin/python SKILL/scripts/transkript.py "OUT/_data/<id>/video.mp4"
 ```
 
 Skript `.env` da `ELEVENLABS_API_KEY` bo'lsa ElevenLabs orqali (o'zbek tilida eng aniq),
-bo'lmasa kompyuterning o'zida Whisper orqali matn chiqaradi. Natija `transkript.json` ga
-yoziladi: til, to'liq matn va vaqtli bo'laklar.
+bo'lmasa kompyuterning o'zida Whisper orqali matn chiqaradi. Whisper avval tilni aniqlaydi:
+ingliz yoki rus tilida tez model, o'zbek va boshqa tillarda katta model ishlaydi. Katta model
+birinchi marta taxminan 1.5 GB yuklanadi, buni foydalanuvchiga oldindan ayting. Natija
+`transkript.json` ga yoziladi: til, to'liq matn va vaqtli bo'laklar.
+
+**Transkriptni tuzatish (ayniqsa o'zbekcha videolarda):** Whisper o'zbek tilini hali
+mukammal eshitmaydi, so'zlarni buzib yozishi mumkin. Shuning uchun transkriptni xom holida
+ishlatmang:
+
+- Ko'p reels'da ekranda subtitr bo'ladi. Subtitr bor bo'lsa, u **asosiy manba**: kadrlardagi
+  subtitrlarni vaqt bo'yicha o'qing va transkriptdagi buzilgan so'zlarni shu bilan tuzating.
+- Subtitr yo'q joylarda ma'noga qarab ochiq-oydin xatolarni tuzating (masalan, "reylz" →
+  "reels", "intagram" → "Instagram"). Ishonchingiz komil bo'lmagan so'zni `[?]` bilan
+  belgilang, o'ylab topmang.
+- Transkript juda buzilgan bo'lsa (gaplar ma'nosiz), buni foydalanuvchiga ochiq ayting va
+  ElevenLabs'ni taklif qiling: "O'zbekcha nutqni bepul model yaxshi eshitmadi. ElevenLabs'ni
+  ulasangiz, ancha aniq chiqadi. Ulab beraymi?" Rozi bo'lsa, `INSTALL.md` dagi 5-qadamni bajaring
+  va transkriptni qayta chiqaring.
+- Tahlilda hookni aynan keltirishda tuzatilgan matnni ishlating.
 
 - Matnni kadrlar bilan solishtiring: og'iz harakati va ekrandagi yozuv mos kelishi kerak.
 - Kadrda hech narsa bo'lmagan joyda chiqqan "Rahmat", "Obuna bo'ling", "you" kabi gaplar

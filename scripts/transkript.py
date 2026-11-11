@@ -72,8 +72,19 @@ def whisper(audio, til, model_nomi):
         from faster_whisper import WhisperModel
     except ImportError:
         sys.exit("faster-whisper o'rnatilmagan. INSTALL.md, 3-qadamga qarang.")
+    a = np.frombuffer(audio.tobytes(), dtype=np.float32)
+    if model_nomi == "auto":
+        # Tilni kichik model bilan aniqlaymiz. Ingliz va rus tilida small yetarli,
+        # o'zbek va boshqa tillarda esa katta model ancha yaxshi eshitadi.
+        if not til:
+            kichik = WhisperModel("small", device="cpu", compute_type="int8")
+            til, ehtimol, _ = kichik.detect_language(a[: 30 * SR])
+        model_nomi = "small" if til in ("en", "ru") else "large-v3-turbo"
+    # O'zbekcha uchun lotin yozuvidagi namunaviy gap modelni to'g'ri imloga yo'naltiradi
+    boshlov = ("Assalomu alaykum. Bugun sizlarga reels, Instagram va SMM haqida gapirib "
+               "beraman. Ko'rishlar, obunachilar, kontent.") if til == "uz" else None
     m = WhisperModel(model_nomi, device="cpu", compute_type="int8")
-    seg, inf = m.transcribe(np.frombuffer(audio.tobytes(), dtype=np.float32), language=til,
+    seg, inf = m.transcribe(a, language=til, initial_prompt=boshlov,
                             vad_filter=True, beam_size=5, word_timestamps=True)
     seg = list(seg)
     bolaklar = [{"start": round(s.start, 2), "end": round(s.end, 2), "matn": s.text.strip()} for s in seg]
@@ -122,7 +133,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("video")
     ap.add_argument("--til", help="masalan uz, ru, en; berilmasa avtomatik aniqlanadi")
-    ap.add_argument("--model", default="small", help="faster-whisper modeli: small / medium / large-v3")
+    ap.add_argument("--model", default="auto", help="auto (tavsiya), small, medium, large-v3-turbo")
     a = ap.parse_args()
     video = Path(a.video).expanduser().resolve()
     audio = audio_ol(video)

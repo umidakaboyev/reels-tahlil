@@ -12,16 +12,22 @@ Bunaqa narsalarni Instagram'da ham ulashib turaman: [@umid_akaboyev](https://www
 
 ## Qanday o'rnatiladi
 
-Kompyuteringizda Claude desktop ilovasi bo'lishi kerak. Uni ochib, **Code** bo'limiga o'ting va mana shuni yozib yuboring:
+Kompyuteringizda Claude desktop ilovasi bo'lishi kerak.
+
+1. Ilovani oching. Chap yuqori burchakda ikkita tugma bor: chat belgisi va `</>` belgisi. **`</>`** (Code) ni bosing.
+2. O'ng tomondagi **Environment** qismida **This computer** tanlangan bo'lsin. Skill aynan sizning kompyuteringizga o'rnatiladi.
+3. Pastdagi yozish joyiga mana shuni tashlab, yuboring:
 
 ```
 https://github.com/umidakaboyev/reels-tahlil dagi skillni o'rnat.
 INSTALL.md ni o'qib, unga amal qil.
 ```
 
+4. Claude kompyuteringizda buyruq ishlatish uchun ruxsat so'raydi. Har safar ruxsat bering.
+
 Qolganini Claude o'zi qiladi, nima bo'layotganini o'zbekcha aytib turadi. Birinchi safar 5–10 daqiqa ketadi, keyin har safar tayyor turadi.
 
-Agar asosan o'zbekcha videolarni tahlil qilmoqchi bo'lsangiz, Claude sizga ElevenLabs'ni ulashni taklif qiladi. Bu shart emas, lekin o'zbekcha gaplar ancha to'g'ri yozib olinadi.
+Agar asosan o'zbekcha videolarni tahlil qilmoqchi bo'lsangiz, ElevenLabs'ni ulashni maslahat beraman (Claude o'zi taklif qiladi). Bepul model o'zbekchani hali yaxshi eshitmaydi, ElevenLabs bilan gaplar ancha to'g'ri yozib olinadi.
 
 ## Qanday ishlatiladi
 
@@ -32,6 +38,8 @@ Shu videoni tahlil qil: https://www.instagram.com/reel/...
 ```
 
 Ba'zan Instagram havolani ochishga ruxsat bermaydi. Unda videoni telefoningizga yoki kompyuterga yuklab oling va faylning o'zini tashlang, bo'ldi.
+
+Yana bir narsa: Instagram ko'rishlar sonini tashqariga bermaydi. Shuning uchun Claude sizdan blogerning Reels bo'limidan bitta skrinshot so'raydi. Skrinshotdagi raqamlarni o'zi o'qib, video odatdagidan necha barobar ko'p ko'rilganini hisoblaydi.
 
 Bir nechta videoni birdan ham berishingiz mumkin. Masalan, bitta blogerning eng zo'r 3 ta videosini tashlab, "umumiy nima o'xshashligi bor" deb so'rasangiz, takrorlanadigan usullarni ham chiqarib beradi.
 
