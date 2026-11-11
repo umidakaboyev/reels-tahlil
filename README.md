@@ -9,13 +9,6 @@ so'ralganida bo'ladi.
 Bularni ko'z bilan bir marta ko'rib ilg'ash qiyin. Shuning uchun men bu ishni Claude'ga
 topshiradigan skill yasadim.
 
-## Men kimman
-
-Umid Akaboyev. SMM bilan shug'ullanaman, IGLOBAL marketing agentligini boshqaraman va har
-kuni mijozlar uchun kontent tayyorlayman. Bu skillni avval o'zim uchun yozdim, hozir ham o'z
-videolarim va ilhom oladigan blogerlar ustida ishlataman. Sizga aynan o'sha versiyani
-beryapman.
-
 Reels, SMM va AI bo'yicha boshqa foydali narsalar Instagram'imda:
 **[@umid_akaboyev](https://www.instagram.com/umid_akaboyev/)**
 
