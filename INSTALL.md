@@ -44,7 +44,7 @@ python3 -m venv .venv
 
 Windows: `py -m venv .venv`, keyin `.venv\Scripts\pip install -q -r requirements.txt`.
 
-Bu bir-ikki daqiqa olishi mumkin. Buni foydalanuvchiga oldindan ayting.
+Bu 3–5 daqiqa olishi mumkin (transkript modeli kutubxonalari katta). Buni foydalanuvchiga oldindan ayting, toki u jarayon qotib qoldi deb o'ylamasin.
 
 ## 4. Tekshirish
 
