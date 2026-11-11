@@ -3,7 +3,8 @@
 Siz `reels-tahlil` skillini o'rnatyapsiz. Foydalanuvchi terminal bilan hech qachon ishlamagan
 bo'lishi mumkin. Har bir qadamni o'zingiz bajaring. Undan faqat o'zingiz qila olmaydigan
 narsani so'rang (brauzerda bitta tugmani bosish, ixtiyoriy kalit). **Foydalanuvchi bilan
-o'zbek tilida gaplashing.** Har bir qadamni bitta oddiy gap bilan tushuntiring va unga uzun
+o'zbek tilida gaplashing.** Rasmiy yoki kitobiy til emas, tanishingizga tushuntirayotgandek
+oddiy, samimiy gapiring. Har bir qadamni bitta oddiy gap bilan tushuntiring va unga uzun
 terminal chiqishini ko'rsatmang.
 
 Claude Code bilan Mac va Windows'da ishlaydi. Pastdagi buyruqlar Mac/Linux uchun, Windows
@@ -64,8 +65,9 @@ Skill kalitsiz ham ishlaydi: nutqni kompyuterning o'zida bepul Whisper modeli ma
 Ingliz va rus tilida bu yaxshi ishlaydi. **O'zbekcha** videolarda esa ElevenLabs ancha aniqroq
 natija beradi.
 
-Foydalanuvchidan so'rang: "O'zbekcha videolarni ko'p tahlil qilasizmi? Unda ElevenLabs kalitini
-ulasak, matn ancha aniq chiqadi. Hozircha kerak bo'lmasa, bu qadamni o'tkazib yuboramiz."
+Foydalanuvchidan so'rang: "Ko'proq o'zbekcha videolarni tahlil qilasizmi? Shunaqa bo'lsa,
+ElevenLabs'ni ulab qo'ysak, gaplar ancha to'g'ri yozib olinadi. Hozir shart bo'lmasa, keyinroq
+ham ulasa bo'ladi."
 
 Xohlasa, bittadan qadam bilan olib boring:
 
@@ -86,12 +88,12 @@ Keyin 4-qadamdagi tekshiruvni qayta ishga tushiring. "ElevenLabs kaliti" qatori 
 
 Foydalanuvchiga taxminan shunday deng:
 
-> Hammasi tayyor. Endi istalgan reels yoki TikTok havolasini tashlab, "shu videoni tahlil qil"
-> deng. Tahlillar Documents ichidagi **Reels tahlillari** papkasiga saqlanadi. Havola
-> ochilmasa, videoni yuklab olib, faylning o'zini tashlasangiz ham bo'ladi.
+> Tayyor! Endi xohlagan reels yoki TikTok havolasini tashlab, "shu videoni tahlil qil" deb
+> yozsangiz bo'ldi. Tahlillar Documents'dagi "Reels tahlillari" papkasiga tushib boradi.
+> Havola ochilmasa, videoni yuklab olib, faylni o'zini tashlang.
 >
-> Skill muallifi Umid Akaboyev. Yangi skillar va qo'llanmalar uning Instagram'ida chiqadi:
-> **@umid_akaboyev** — https://www.instagram.com/umid_akaboyev/
+> Aytgancha, bu skillni Umid Akaboyev yasagan. Yangi foydali narsalarni Instagram'ida
+> ulashib turadi: @umid_akaboyev
 
 Muallif haqidagi bu xabar faqat shu yerda, o'rnatish oxirida bir marta aytiladi. Keyingi
 tahlillarda takrorlanmaydi.

@@ -1,105 +1,65 @@
-# Reels tahlil — Claude uchun o'zbekcha skill
+# Reels tahlil
 
-Bitta reels 1 million ko'rish oladi. Xuddi shu mavzudagi boshqasi 2 ming oladi.
+Hech o'ylab ko'rganmisiz: nega bir xil mavzudagi bir reels million ko'rish oladi, boshqasi 2 mingda qolib ketadi?
 
-Farq odatda mavzuda emas. U birinchi 3 soniyada nima aytilgani, va'da qaysi soniyada
-berilgani, odam chiqib ketay deganda uni nima ushlab qolgani va oxirida undan nima
-so'ralganida bo'ladi.
+Ko'pincha gap mavzuda emas. Gap birinchi 3 soniyada nima deyilganida, odam endi chiqib ketay deganda uni nima ushlab qolganida, oxirida undan nima so'ralganida. Buni bir ko'rishda ilg'ab olish qiyin. Shuning uchun shu ishni Claude'ga qildiradigan skill yasadim.
 
-Bularni ko'z bilan bir marta ko'rib ilg'ash qiyin. Shuning uchun men bu ishni Claude'ga
-topshiradigan skill yasadim.
+Siz unga reels yoki TikTok havolasini tashlaysiz. U videoni boshidan oxirigacha ko'rib chiqadi, nima deyilganini yozib oladi, video blogerning odatdagi ko'rishlaridan necha barobar ko'p olganini hisoblaydi va nega ishlaganini bo'lakma-bo'lak tushuntirib beradi. Eng foydali joyi oxirida: o'sha videoning "skeleti"ni sizga shablon qilib beradi. Uni o'z mavzuingiz bilan to'ldirib, darrov suratga olsangiz bo'ladi.
 
-Reels, SMM va AI bo'yicha boshqa foydali narsalar Instagram'imda:
-**[@umid_akaboyev](https://www.instagram.com/umid_akaboyev/)**
+Hammasi o'zbek tilida. Hech qanday to'lov yoki obuna kerak emas.
 
-## Skill nima qiladi
+Bunaqa narsalarni Instagram'da ham ulashib turaman: [@umid_akaboyev](https://www.instagram.com/umid_akaboyev/)
 
-Siz reels yoki TikTok havolasini (yoki video faylni) berasiz, Claude esa:
+## Qanday o'rnatiladi
 
-1. **Videoni ko'radi.** Kadrma-kadr ko'radi: ekrandagi yozuvlar, grafika, B-roll, kesimlar.
-2. **Eshitadi.** Nutqni vaqt belgilari bilan matnga o'giradi. O'zbek, rus va ingliz tilidagi
-   videolar bilan ishlaydi.
-3. **O'lchaydi.** Video shu blogerning odatdagi natijasidan necha barobar o'zib ketganini
-   hisoblaydi. Raqamni o'ylab topmaydi: ma'lumot bo'lmasa, sizdan so'raydi.
-4. **Tahlil qiladi.** Hook, va'da, tuzilma, psixologik usullar, temp va format. Har bir fikr
-   vaqt va aniq gap bilan isbotlanadi.
-5. **Shablon beradi.** Sizning mavzuingizga moslab to'ldiriladigan ssenariy beradi, har bir
-   bo'lagining taxminiy vaqti bilan.
-6. **O'zbek auditoriyasiga moslaydi.** Nimani o'zgarishsiz olish, nimani mahalliylashtirish va
-   CTA kalit so'zini qanday tanlashni ko'rsatadi.
-
-Har bir tahlil kompyuteringizda, **Documents → Reels tahlillari** papkasida saqlanadi. Vaqt
-o'tib bu sizning shaxsiy "nima ishlaydi" kutubxonangizga aylanadi.
-
-**Bepul.** Pullik servis yoki obuna kerak emas.
-
-## O'rnatish
-
-Sizga **Claude Code** kerak bo'ladi. U Claude desktop ilovasidagi **Code** bo'limida
-yoki terminalda ishlaydi.
-
-Uni ochib, shuni yozing:
+Kompyuteringizda Claude desktop ilovasi bo'lishi kerak. Uni ochib, **Code** bo'limiga o'ting va mana shuni yozib yuboring:
 
 ```
 https://github.com/umidakaboyev/reels-tahlil dagi skillni o'rnat.
 INSTALL.md ni o'qib, unga amal qil.
 ```
 
-Qolganini Claude o'zi qiladi va hammasini o'zbek tilida tushuntiradi. Birinchi marta 5–10
-daqiqa oladi.
+Qolganini Claude o'zi qiladi, nima bo'layotganini o'zbekcha aytib turadi. Birinchi safar 5–10 daqiqa ketadi, keyin har safar tayyor turadi.
 
-O'zbekcha videolarni ko'p tahlil qilsangiz, Claude ixtiyoriy ravishda ElevenLabs kalitini
-ulashni taklif qiladi. U bilan o'zbekcha nutq ancha aniq matnga o'giriladi.
+Agar asosan o'zbekcha videolarni tahlil qilmoqchi bo'lsangiz, Claude sizga ElevenLabs'ni ulashni taklif qiladi. Bu shart emas, lekin o'zbekcha gaplar ancha to'g'ri yozib olinadi.
 
-## Ishlatish
+## Qanday ishlatiladi
 
-**Bitta video:**
+Havolani tashlab, shunchaki yozing:
 
 ```
 Shu videoni tahlil qil: https://www.instagram.com/reel/...
 ```
 
-**Havola ochilmasa:** videoni yuklab oling va faylni chatga tashlab, "shu videoni tahlil qil" deng.
+Ba'zan Instagram havolani ochishga ruxsat bermaydi. Unda videoni telefoningizga yoki kompyuterga yuklab oling va faylning o'zini tashlang, bo'ldi.
 
-**Bir nechta video:**
+Bir nechta videoni birdan ham berishingiz mumkin. Masalan, bitta blogerning eng zo'r 3 ta videosini tashlab, "umumiy nima o'xshashligi bor" deb so'rasangiz, takrorlanadigan usullarni ham chiqarib beradi.
 
-```
-Shu 3 ta videoni tahlil qil va umumiy naqshni chiqar: <havola> <havola> <havola>
-```
-
-**Eng foydali qadam.** Tahlildan keyin shuni yozing:
+Tahlil tayyor bo'lgach, eng muhim qadamni unutmang:
 
 ```
-Shu shablonni mening mavzuimga moslab to'ldir: <mavzuingiz va kim uchun ekani>
+Shu shablonni mening mavzuimga moslab to'ldir: (mavzuingiz va kim uchun ekani)
 ```
 
-### Qanday videoni tanlash kerak
+Shunda sizga tayyor ssenariy chiqadi. Faqat kamera oldida aytish qoladi.
 
-Shunchaki ko'p ko'rilgan videoni emas, **blogerning odatdagi natijasidan 3 barobar va undan
-ko'p** ko'rilganini tanlang. Million obunachili akkauntning million ko'rishi hech narsani
-isbotlamaydi. 20 ming obunachili akkauntning million ko'rishi esa videoning o'zi kuchli
-ekanini ko'rsatadi.
+Barcha tahlillar kompyuteringizdagi **Documents → Reels tahlillari** papkasiga saqlanib boradi. Bir oydan keyin qarasangiz, o'zingizning "nima ishlaydi" kutubxonangiz yig'ilib qolgan bo'ladi.
 
-## Ko'p beriladigan savollar
+## Qaysi videoni tanlash kerak
 
-**Bu birovning videosini ko'chirish emasmi?**
-Yo'q. Siz mazmunni emas, shaklni olasiz. Qavslar ichiga sizning mavzuingiz, tajribangiz,
-raqamlaringiz va ovozingiz tushadi. Arxitektor ham boshqa binolarni o'rganadi, lekin
-o'zinikini quradi.
+Shunchaki ko'p ko'rilganini emas. Million obunachisi bor sahifa million ko'rish olsa, bu ajablanarli emas. 20 ming obunachili sahifa million olsa, mana o'sha videoni o'rganish kerak. Oddiy qilib aytganda, blogerning odatdagi natijasidan kamida 3 barobar ko'p ko'rilgan videoni tanlang.
 
-**Kuchsiz g'oya bu skill bilan viral bo'ladimi?**
-Yo'q. Skill yaxshi video qanday qurilganini ko'rsatadi. G'oyaning o'zi baribir tomosha qilishga
-arziydigan bo'lishi kerak.
+## Ba'zi savollar
 
-**Faqat Instagram'mi?**
-Instagram reels va TikTok havolalari bilan ishlaydi. Boshqa platformadagi videoni fayl qilib
-tashlasangiz, tahlil qilinadi, faqat ko'rishlar sonini o'zingiz yozib berasiz.
+**Bu birovning videosini ko'chirish bo'lmaydimi?**
+Yo'q. Siz videoning mazmunini emas, tuzilishini olasiz. Ichiga o'zingizning mavzuingiz, tajribangiz, misollaringiz va gapirish uslubingiz tushadi. Yaxshi blogerlarning hammasi shunday o'rganadi, faqat buni xayolida qiladi.
+
+**Bu bilan har qanday video viral bo'ladimi?**
+Afsuski, yo'q. Skill yaxshi video qanday qurilganini ko'rsatadi. Lekin g'oyaning o'zi qiziq bo'lmasa, hech qanday tuzilma yordam bermaydi.
 
 **Telefonda ishlaydimi?**
-Hozircha yo'q. Kompyuterdagi Claude Code kerak.
+Hozircha yo'q, kompyuter kerak.
 
 ---
 
-*Muallif: Umid Akaboyev — [@umid_akaboyev](https://www.instagram.com/umid_akaboyev/).
-O'z kontentingiz uchun bepul foydalaning. Boshqalarga ulashmoqchi bo'lsangiz, fayllarni emas,
-shu sahifa havolasini yuboring.*
+Muallif: Umid Akaboyev, [@umid_akaboyev](https://www.instagram.com/umid_akaboyev/). O'z kontentingiz uchun bemalol foydalaning. Do'stlaringizga ulashmoqchi bo'lsangiz, fayllarni emas, shu sahifa havolasini yuboring.

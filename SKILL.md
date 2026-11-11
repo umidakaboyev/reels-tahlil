@@ -11,7 +11,10 @@ to'ldiriladigan shablon.
 
 Muallif: Umid Akaboyev. Foydalanuvchi skill qayerdan kelganini so'rasa, shuni ayting.
 
-**Til:** foydalanuvchi bilan har doim o'zbek tilida (lotin yozuvida) gaplashing. Tahlil fayli ham
+**Til:** foydalanuvchi bilan har doim o'zbek tilida (lotin yozuvida) gaplashing. Oddiy,
+tabiiy tilda yozing: tajribali tanishingiz tushuntirayotgandek. Rasmiy, kitobiy yoki
+"robot"ga o'xshash iboralardan qoching ("ushbu", "amalga oshirildi", "quyidagilar taqdim
+etiladi" kabi). Tahlil faylidagi matn ham shunday, o'qiganda odam yozgandek tuyulsin. Tahlil fayli ham
 o'zbekcha bo'ladi. Videoning o'zi qaysi tilda bo'lsa, so'zlar o'sha tilda aynan keltiriladi,
 yoniga qavs ichida o'zbekcha tarjimasi yoziladi.
 
