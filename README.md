@@ -27,7 +27,7 @@ INSTALL.md ni o'qib, unga amal qil.
 
 Qolganini Claude o'zi qiladi, nima bo'layotganini o'zbekcha aytib turadi. Birinchi safar 5–10 daqiqa ketadi, keyin har safar tayyor turadi.
 
-Agar asosan o'zbekcha videolarni tahlil qilmoqchi bo'lsangiz, ElevenLabs'ni ulashni maslahat beraman (Claude o'zi taklif qiladi). Bepul model o'zbekchani hali yaxshi eshitmaydi, ElevenLabs bilan gaplar ancha to'g'ri yozib olinadi.
+O'rnatish oxirida Claude sizga ElevenLabs'ni ulashni taklif qiladi va qanday ulashni bosqichma-bosqich o'rgatadi. O'zbekcha videolar uchun buni albatta qiling: kompyuterdagi bepul model o'zbekchani hali yaxshi eshitmaydi, ElevenLabs esa gaplarni ancha to'g'ri yozib oladi. Ro'yxatdan o'tish bepul, bitta reels transkripti esa bir sentdan ham arzon.
 
 ## Qanday ishlatiladi
 

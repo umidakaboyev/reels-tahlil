@@ -112,6 +112,18 @@ B-roll, grafika, zoom yoki ekran yozuvi chiqadi, odam qayerda turibdi, yorug'lik
 
 ### 4-qadam: Eshitish (transkript)
 
+**Avval ElevenLabs ulanganini tekshiring.** `SKILL/.env` da `ELEVENLABS_API_KEY` yo'q bo'lsa
+va video o'zbekcha bo'lsa (yoki ekrandagi yozuvlar, caption o'zbekcha bo'lsa), transkriptdan
+oldin foydalanuvchiga ayting:
+
+> Bu video o'zbekcha. Gaplarni to'g'ri yozib olish uchun ElevenLabs ulangan bo'lishi kerak,
+> kompyuterdagi bepul model o'zbekchani ko'p buzadi. Hozir ulab qo'yamizmi? 3–4 daqiqa oladi,
+> o'zim qadamma-qadam aytib turaman. Yoki hozircha bepul model bilan davom etaymi?
+
+"Ulaymiz" desa, quyidagi **ElevenLabs'ni ulash** bo'limini bajaring, keyin tahlilga qayting.
+"Davom et" desa, bepul model bilan davom eting va tahlil oxirida bir gap bilan eslatib qo'ying.
+Bu savolni bitta suhbatda faqat bir marta bering.
+
 ```bash
 SKILL/.venv/bin/python SKILL/scripts/transkript.py "OUT/_data/<id>/video.mp4"
 ```
@@ -180,6 +192,18 @@ ko'rinishini (nega yutgani, temp qatori, shablonning dastlabki 3 bo'lagi) ko'rsa
 davom etishni so'rang. Rozilik bo'lsa, qolganlarini bittadan, xuddi shu chuqurlikda qiling.
 Oxirida **takrorlanayotgan naqsh** bo'limini yozing: qaysi hook turlari, usullar va bo'lak
 shakllari necha marta takrorlandi. 5 ta video bitta bloger uchun naqsh, umumiy qonun emas.
+
+## ElevenLabs'ni ulash
+
+Foydalanuvchi "ElevenLabs'ni ulab ber", "transkriptni yaxshila", "kalit qo'shmoqchiman" desa
+yoki 4-qadamda rozi bo'lsa, `SKILL/INSTALL.md` dagi **5-qadamni** aynan bajaring: sababini
+sodda tushuntiring, **har safar bitta qadamni** ayting va "bo'ldi" deguncha kuting, kalitni
+`.env` ga yozing (qaytarib ko'rsatmasdan) va `tekshir.py` bilan tekshiring. Tahlil o'rtasida
+ulangan bo'lsa, `transkript.py` ni qayta ishga tushirib, transkriptni yangilang.
+
+`transkript.py` natijasida `ogohlantirish` chiqsa (masalan, balans tugagan yoki ruxsat yo'q),
+uni oddiy so'zlar bilan foydalanuvchiga ayting va nima qilishni tushuntiring. `INSTALL.md`
+5-qadamidagi "Xatolar" va "Narx haqida" qismlariga qarang.
 
 ## Shablonni to'ldirish
 

@@ -59,22 +59,35 @@ Birinchi ishga tushishda ffmpeg yuklanadi (taxminan 70 MB), shuning uchun bir da
 kerak bo'lishi mumkin. Har bir qator `ok` yoki `ixtiyoriy` bo'lishi kerak. `XATO` chiqsa,
 izohiga qarab tuzating.
 
-## 5. Ixtiyoriy: o'zbekcha nutq uchun aniqroq transkript
+## 5. ElevenLabs'ni ulash (o'zbekcha videolar uchun kerak)
 
-Skill kalitsiz ham ishlaydi: nutqni kompyuterning o'zida bepul Whisper modeli matnga o'giradi.
-Ingliz va rus tilida bu yaxshi ishlaydi. **O'zbekcha** videolarda esa Whisper so'zlarni ko'p
-buzadi, ElevenLabs ancha aniq natija beradi. Shuning uchun o'zbekcha kontent qiladiganlarga
-bu qadamni tavsiya qiling.
+Bu qadamni o'tkazib yubormang, foydalanuvchiga albatta taklif qiling. Bu skillni asosan o'zbek
+tilida kontent qiladiganlar ishlatadi. Kompyuterdagi bepul model esa o'zbekchani hali yaxshi
+eshitmaydi: so'zlarni buzadi, ba'zan ma'nosiz gaplar chiqaradi. Transkript yomon bo'lsa,
+tahlil ham noto'g'ri chiqadi. ElevenLabs o'zbekchani ancha to'g'ri yozib oladi.
 
-Foydalanuvchidan so'rang: "Ko'proq o'zbekcha videolarni tahlil qilasizmi? Shunaqa bo'lsa,
-ElevenLabs'ni ulab qo'ysak, gaplar ancha to'g'ri yozib olinadi. Hozir shart bo'lmasa, keyinroq
-ham ulasa bo'ladi."
+Foydalanuvchiga sodda qilib tushuntiring, taxminan shunday:
 
-Xohlasa, bittadan qadam bilan olib boring:
+> Endi bitta muhim narsa. Videodagi gaplarni yozib olish uchun ElevenLabs degan servisni
+> ulaymiz. Kompyuterdagi bepul model o'zbekchani yaxshi tushunmaydi, so'zlarni buzib yozadi.
+> ElevenLabs esa ancha aniq. Ulash 3–4 daqiqa oladi, men bosqichma-bosqich aytib turaman.
+> Hozir vaqtingiz bo'lmasa, keyin "ElevenLabs'ni ulab ber" desangiz kifoya.
 
-1. https://elevenlabs.io saytida ro'yxatdan o'tsin (Google orqali ham bo'ladi).
-2. **Developers → API Keys** bo'limida yangi kalit yaratsin va nusxalasin.
-3. Kalitni shu chatga tashlasin.
+Rozi bo'lsa, **har safar faqat bitta qadamni** ayting va "bo'ldi" deguncha kuting.
+Hammasini birdan yozib tashlamang:
+
+1. **Ro'yxatdan o'tish.** https://elevenlabs.io/app/sign-up saytiga kiring. Eng osoni
+   **Sign up with Google** (Google bilan kirish) tugmasi.
+2. **Kalitlar sahifasi.** Kirgach, shu sahifani oching: https://elevenlabs.io/app/developers/api-keys
+   (yoki chap pastdagi menyudan **Developers → API Keys**).
+3. **Yangi kalit.** **Create API Key** (yoki **Create Key**) tugmasini bosing. Nomiga
+   `reels-tahlil` deb yozing.
+4. **Ruxsat.** Kalit sozlamalarida ruxsatlar ro'yxati chiqsa, **Speech to Text** yoqilgan
+   bo'lsin. Qolganlariga tegmasa ham bo'ladi.
+5. **Nusxalash.** **Create** bosilgach, kalit bir marta ko'rsatiladi (`sk_` bilan boshlanadi).
+   Uni nusxalang. Oynani yopsangiz, qayta ko'rsatilmaydi, unda yangisini yaratish kerak bo'ladi.
+6. **Chatga tashlash.** Kalitni shu chatga tashlang. U faqat sizning kompyuteringizda,
+   skill papkasida saqlanadi.
 
 Kalitni olgach, `.env` fayliga yozing. **Kalitni foydalanuvchiga qaytarib ko'rsatmang va
 hech qanday buyruq natijasida chiqarmang.**
@@ -84,6 +97,19 @@ printf 'ELEVENLABS_API_KEY=%s\n' '<kalit>' > ~/.claude/skills/reels-tahlil/.env
 ```
 
 Keyin 4-qadamdagi tekshiruvni qayta ishga tushiring. "ElevenLabs kaliti" qatori `ok` bo'lishi kerak.
+
+**Narx haqida halol ayting:** ElevenLabs'da ro'yxatdan o'tish bepul. Transkript juda arzon:
+bitta reels uchun odatda bir sentdan ham kam ketadi (narx vaqt o'tib o'zgarishi mumkin). Lekin bepul tarifda transkript limiti bo'lmasligi yoki
+tez tugashi mumkin. Unda ElevenLabs'ning o'zi to'lov usulini qo'shishni so'raydi. Aniq narxni
+https://elevenlabs.io/pricing/api sahifasida ko'rsa bo'ladi. Tahlil paytida "balans yoki limit
+tugagan" xatosi chiqsa, foydalanuvchiga shuni tushuntiring.
+
+**Xatolar:**
+- "kalitni qabul qilmadi" → kalit to'liq nusxalanmagan. Qaytadan nusxalab tashlasin.
+- "Speech to Text ruxsati yo'q" → 4-qadamdagi ruxsatni yoqsin yoki yangi kalit yaratsin.
+
+Foydalanuvchi ulashni xohlamasa, majburlamang. Skill baribir ishlaydi, faqat o'zbekcha
+gaplarda xato ko'proq bo'ladi. Buni bir gap bilan ayting va davom eting.
 
 ## 6. Tayyor
 

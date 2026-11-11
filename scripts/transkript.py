@@ -39,14 +39,24 @@ def elevenlabs(video, til, kalit):
     import requests
     wav = subprocess.run(["ffmpeg", "-loglevel", "error", "-i", str(video), "-vn", "-ac", "1",
                           "-ar", str(SR), "-f", "wav", "-"], capture_output=True, check=True).stdout
-    data = {"model_id": "scribe_v1", "timestamps_granularity": "word", "tag_audio_events": "false"}
-    if til:
-        data["language_code"] = til
-    r = requests.post("https://api.elevenlabs.io/v1/speech-to-text",
-                      headers={"xi-api-key": kalit}, data=data,
-                      files={"file": ("audio.wav", wav, "audio/wav")}, timeout=300)
-    if r.status_code in (401, 403):
-        raise RuntimeError("ElevenLabs kalitni qabul qilmadi (401/403). .env dagi kalitni tekshiring.")
+    r = None
+    for model in ("scribe_v2", "scribe_v1"):  # eng yangisi, eskirgan bo'lsa oldingisi
+        data = {"model_id": model, "timestamps_granularity": "word", "tag_audio_events": "false"}
+        if til:
+            data["language_code"] = til
+        r = requests.post("https://api.elevenlabs.io/v1/speech-to-text",
+                          headers={"xi-api-key": kalit}, data=data,
+                          files={"file": ("audio.wav", wav, "audio/wav")}, timeout=300)
+        if r.status_code not in (400, 422) or "model" not in r.text.lower():
+            break
+    matn = r.text.lower()
+    if r.status_code == 401:
+        raise RuntimeError("ElevenLabs kalitni qabul qilmadi. Kalit noto'g'ri nusxalangan bo'lishi mumkin.")
+    if r.status_code == 403 or "permission" in matn:
+        raise RuntimeError("Kalitda Speech to Text ruxsati yo'q. ElevenLabs'da kalit sozlamasida "
+                           "Speech to Text'ni yoqish kerak.")
+    if r.status_code in (402, 429) or "quota" in matn or "credit" in matn or "payment" in matn:
+        raise RuntimeError("ElevenLabs hisobida transkript uchun balans yoki limit tugagan.")
     r.raise_for_status()
     j = r.json()
     sozlar = [w for w in j.get("words", []) if w.get("type", "word") == "word"]
@@ -61,7 +71,7 @@ def elevenlabs(video, til, kalit):
             bolaklar.append({"start": round(joriy[0]["start"], 2), "end": round(joriy[-1]["end"], 2),
                              "matn": " ".join(x["text"].strip() for x in joriy).strip()})
             joriy = []
-    return {"vosita": "elevenlabs scribe_v1", "til": j.get("language_code"),
+    return {"vosita": f"elevenlabs {model}", "til": j.get("language_code"),
             "matn": (j.get("text") or "").strip(), "bolaklar": bolaklar,
             "_sozlar": [(w["start"], w["end"]) for w in sozlar]}
 
@@ -158,6 +168,9 @@ def main():
     })
     if ogohlantirish:
         natija["ogohlantirish"] = ogohlantirish
+    if natija["vosita"].startswith("faster-whisper") and natija.get("til") == "uz":
+        natija["elevenlabs_kerak"] = ("O'zbekcha nutq bepul model bilan yozildi, xatolar ko'p bo'lishi "
+                                      "mumkin. SKILL.md: 'ElevenLabs'ni ulash' bo'limiga qarang.")
     if not natija["bolaklar"]:
         natija["izoh"] = "nutq topilmadi: ekrandagi matnlarga tayaning"
 
